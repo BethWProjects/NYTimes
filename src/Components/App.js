@@ -25,9 +25,10 @@ function App() {
 
   console.log(articles)
 
-const singleArticle = (url) => {
-  return articles.find((article) => {
-    return article.short_url === url
+const singleArticle = (date) => {
+  console.log('publised date', date)
+  return articles.filter((article) => {
+    return article.published_date === date
   })
 }
 
@@ -36,13 +37,20 @@ const singleArticle = (url) => {
       <Nav />
       <Switch>
       <Route
-            path="/:id"
+            exact path="/:id"
             render={({ match }) => {
              const clickedArticle = singleArticle(match.params.id)
              return <Details article={clickedArticle} />
             }}  
           />
-      <Articles articles={articles} />
+      <Route
+        path='/'
+        render={() => (
+          <Articles articles={articles} />
+
+        )}
+      
+      /> 
 
       </Switch>
     </div>

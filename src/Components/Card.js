@@ -5,6 +5,7 @@ import './Card.css'
 // pass in and destructure props from Articles component to display on individual cards. 
 
 const Card = ({image, title, id}) => {
+    console.log('id', id)
     return (
         <Link to={`/${id}`} className='card-id' aria-label={title}>
         <div className="card-container">
