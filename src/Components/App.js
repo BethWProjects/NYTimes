@@ -29,8 +29,7 @@ function App() {
   console.log('articles', articles)
 
   const filterAllArticles = (data) => {
-    
-    console.log('this is data', data)
+    // console.log('this is data', data)
     let filteredArticles = articles.filter(article => article.section === data)
     // console.log('test', filteredArticles)
     setArticles(filteredArticles)

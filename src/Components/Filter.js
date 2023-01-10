@@ -19,6 +19,7 @@ const Filter = ({ filterAllArticles }) => {
             <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('us')}}>US</button>
             <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('well')}}>WELL</button>
             <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('world')}}>WORLD</button>
+            <button className="button-36" id="filter-button">CLEAR</button>
         </div>
     )
 }
