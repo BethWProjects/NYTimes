@@ -1,4 +1,10 @@
-/* CSS */
+.details-component {
+    margin-top: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .button-35 {
   align-items: center;
   background-color: #fff;
@@ -29,4 +35,11 @@
 
 .button-35:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+@media only screen and (min-width:300px) and (max-width:675px) {
+
+.details-image {
+    width: 80%;
+}
 }
