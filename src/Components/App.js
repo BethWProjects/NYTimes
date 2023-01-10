@@ -12,6 +12,7 @@ import Filter from './Filter';
 function App() {
 
   const [articles, setArticles] = useState([])
+  const [filterArticles, setFilteredArticles] = useState(null)
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -24,7 +25,14 @@ function App() {
     setLoading(false)
   }, [])
 
-  console.log(articles)
+  console.log('articles', articles)
+
+  const filterAllArticles = (section) => {
+    let filteredArticles = articles.filter(article => article.section === section)
+    return filteredArticles
+  }
+  console.log(filterAllArticles('world'))
+  
 
 const singleArticle = (date) => {
   console.log('publised date', date)
