@@ -2,8 +2,8 @@ import React from 'react'
 import './Details.css'
 
 const Details = ({article}) => {
-    console.log('article', article)
-    console.log('article', article[0].title)
+    // console.log('article', article)
+    // console.log('article', article[0].title)
     
     return (
         <div className='details-component'>

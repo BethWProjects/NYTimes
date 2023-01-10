@@ -26,7 +26,7 @@ function App() {
   console.log(articles)
 
 const singleArticle = (date) => {
-  console.log('url', date)
+  console.log('publised date', date)
   return articles.filter((article) => {
     return article.published_date === date
   })
@@ -37,7 +37,7 @@ const singleArticle = (date) => {
       <Nav />
       <Switch>
       <Route
-            path="/:id"
+            exact path="/:id"
             render={({ match }) => {
              const clickedArticle = singleArticle(match.params.id)
              return <Details article={clickedArticle} />
