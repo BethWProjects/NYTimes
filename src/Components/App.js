@@ -25,9 +25,10 @@ function App() {
 
   console.log(articles)
 
-const singleArticle = (url) => {
-  return articles.find((article) => {
-    return article.short_url === url
+const singleArticle = (date) => {
+  console.log('url', date)
+  return articles.filter((article) => {
+    return article.published_date === date
   })
 }
 

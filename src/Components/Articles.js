@@ -9,8 +9,8 @@ const Articles = ({articles}) => {
     const articleData = articles.map((article) => {
         return(
             <Card 
-                id={article.short_url}
-                key={article.short_url}
+                id={article.published_date}
+                key={article.uri}
                 image={article.multimedia[2].url}
                 title={article.title}
             />
