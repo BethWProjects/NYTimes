@@ -1,13 +1,12 @@
 .card {
-    border-radius: 3%;
     width: 225px;
-    height: 470px;
+    height: 400px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px grey;
     position: relative;
-    background-color: rgb(246, 249, 249);
+    background-color: white;
     overflow: auto;
     align-items: center;
 }
@@ -36,4 +35,11 @@
   }
   a:visited {
      color: black;
+  }
+
+  .article-title {
+    margin-top: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 20px;
   }
