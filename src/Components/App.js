@@ -33,9 +33,12 @@ function App() {
   }
   console.log(filterAllArticles('world'))
   
+  useEffect(() => {
+    setFilteredArticles(filterAllArticles())
+  }, [])
 
 const singleArticle = (date) => {
-  console.log('publised date', date)
+  console.log('published date', date)
   return articles.filter((article) => {
     return article.published_date === date
   })
