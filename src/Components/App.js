@@ -6,11 +6,14 @@ import './App.css';
 import Nav from './Nav'
 import Articles from './Articles';
 import Details from './Details';
+import Filter from './Filter';
 
 
 function App() {
 
   const [articles, setArticles] = useState([])
+  const [filtered, setFiltered] = useState([])
+  const [section, setSection] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -23,7 +26,20 @@ function App() {
     setLoading(false)
   }, [])
 
-  console.log(articles)
+  console.log('articles', articles)
+
+  const filterAllArticles = (data) => {
+    // console.log('this is data', data)
+    let filteredArticles = articles.filter(article => article.section === data)
+    // console.log('test', filteredArticles)
+    setArticles(filteredArticles)
+  }
+
+  console.log('filter', filtered)
+  
+  // useEffect(() => {
+  //   setFilteredArticles(filterAllArticles(section))
+  // }, [])
 
 const singleArticle = (date) => {
   console.log('publised date', date)
@@ -46,8 +62,10 @@ const singleArticle = (date) => {
       <Route
         path='/'
         render={() => (
-          <Articles articles={articles} />
-
+          <div className='article-filter-section'>
+            <Filter filterAllArticles={filterAllArticles}/>
+            <Articles articles={articles} />
+          </div>
         )}
       
       /> 
