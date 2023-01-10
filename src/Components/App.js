@@ -25,7 +25,11 @@ function App() {
 
   console.log(articles)
 
-// const singleArticle = ()
+const singleArticle = (url) => {
+  return articles.find((article) => {
+    return article.short_url === url
+  })
+}
 
   return (
     <div className="App">
@@ -33,7 +37,10 @@ function App() {
       <Switch>
       <Route
             path="/:id"
-            render={({ match }) => <Details articleId={match.params.id} />}
+            render={({ match }) => {
+             const clickedArticle = singleArticle(match.params.id)
+             return <Details article={clickedArticle} />
+            }}  
           />
       <Articles articles={articles} />
 
