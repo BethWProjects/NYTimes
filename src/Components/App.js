@@ -43,7 +43,14 @@ const singleArticle = (date) => {
              return <Details article={clickedArticle} />
             }}  
           />
-      <Articles articles={articles} />
+      <Route
+        path='/'
+        render={() => (
+          <Articles articles={articles} />
+
+        )}
+      
+      /> 
 
       </Switch>
     </div>
