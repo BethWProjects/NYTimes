@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { fetchArticles } from '../apiCalls';
 import './App.css';
 import Nav from './Nav'
+import Articles from './Articles';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      <Articles />
     </div>
   );
 }
