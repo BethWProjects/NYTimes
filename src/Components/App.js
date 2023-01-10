@@ -6,6 +6,7 @@ import './App.css';
 import Nav from './Nav'
 import Articles from './Articles';
 import Details from './Details';
+import Filter from './Filter';
 
 
 function App() {
@@ -46,8 +47,10 @@ const singleArticle = (date) => {
       <Route
         path='/'
         render={() => (
-          <Articles articles={articles} />
-
+          <div className='article-filter-section'>
+            <Filter />
+            <Articles articles={articles} />
+          </div>
         )}
       
       /> 
