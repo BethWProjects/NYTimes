@@ -12,7 +12,8 @@ import Filter from './Filter';
 function App() {
 
   const [articles, setArticles] = useState([])
-  const [filterArticles, setFilteredArticles] = useState(null)
+  const [filtered, setFiltered] = useState([])
+  const [section, setSection] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -27,18 +28,22 @@ function App() {
 
   console.log('articles', articles)
 
-  const filterAllArticles = (section) => {
-    let filteredArticles = articles.filter(article => article.section === section)
-    return filteredArticles
+  const filterAllArticles = (data) => {
+    
+    console.log('this is data', data)
+    let filteredArticles = articles.filter(article => article.section === data)
+    // console.log('test', filteredArticles)
+    setArticles(filteredArticles)
   }
-  console.log(filterAllArticles('world'))
+
+  console.log('filter', filtered)
   
-  useEffect(() => {
-    setFilteredArticles(filterAllArticles())
-  }, [])
+  // useEffect(() => {
+  //   setFilteredArticles(filterAllArticles(section))
+  // }, [])
 
 const singleArticle = (date) => {
-  console.log('published date', date)
+  console.log('publised date', date)
   return articles.filter((article) => {
     return article.published_date === date
   })
@@ -59,7 +64,7 @@ const singleArticle = (date) => {
         path='/'
         render={() => (
           <div className='article-filter-section'>
-            <Filter />
+            <Filter filterAllArticles={filterAllArticles}/>
             <Articles articles={articles} />
           </div>
         )}

@@ -1,10 +1,10 @@
 import React from "react"
 import './Filter.css'
 
-const Filter = () => {
+const Filter = ({ filterAllArticles }) => {
     return (
         <div className="filter-container">
-            <button className="button-36" id="filter-button">ARTS</button>
+            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('arts')}}>ARTS</button>
             <button className="button-36" id="filter-button">BOOKS</button>
             <button className="button-36" id="filter-button">BUSINESS</button>
             <button className="button-36" id="filter-button">CLIMATE</button>
@@ -16,9 +16,9 @@ const Filter = () => {
             <button className="button-36" id="filter-button">OPINION</button>
             <button className="button-36" id="filter-button">SPORTS</button>
             <button className="button-36" id="filter-button">TECHNOLOGY</button>
-            <button className="button-36" id="filter-button">US</button>
-            <button className="button-36" id="filter-button">WELL</button>
-            <button className="button-36" id="filter-button">WORLD</button>
+            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('us')}}>US</button>
+            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('well')}}>WELL</button>
+            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('world')}}>WORLD</button>
         </div>
     )
 }
