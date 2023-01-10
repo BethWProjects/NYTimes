@@ -1,9 +1,21 @@
 import React from "react"
 import './Articles.css'
+import Card from "./Card"
 
-const Articles = () => {
+const Articles = ({articles}) => {
+
+    const articleData = articles.map((article) => {
+        return(
+            <Card 
+                id={article.short_url}
+                key={article.short_url}
+                image={article.multimedia[2].url}
+                title={article.title}
+            />
+        )
+    })
     return (
-        <div>TEST</div>
+        <div className='cards'>{articleData}</div>
     )
 }
 
