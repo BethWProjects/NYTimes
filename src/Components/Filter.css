@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
 .filter-container {
   margin-top: 10px;
 }
@@ -12,7 +14,7 @@
     cursor: pointer;
     display: inline-flex;
     flex: 1 1 auto;
-    font-family: Inter,sans-serif;
+    font-family: 'Goudy Bookletter 1911', serif;
     font-size: 1.1rem;
     font-weight: 700;
     justify-content: center;
