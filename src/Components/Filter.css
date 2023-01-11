@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
 .filter-container {
   margin-top: 10px;
 }
@@ -12,14 +14,14 @@
     cursor: pointer;
     display: inline-flex;
     flex: 1 1 auto;
-    font-family: Inter,sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: .9rem;
     font-weight: 700;
     justify-content: center;
     line-height: 1;
     margin: 0;
     outline: none;
-    padding: 1rem 1.2rem;
+    padding: .7rem 1rem;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s,-webkit-box-shadow .2s;
@@ -45,6 +47,6 @@
 
     .button-36 {
         font-size: .7rem;
-        padding: .8rem .8rem;
+        padding: .3rem .3rem;
     }
     }

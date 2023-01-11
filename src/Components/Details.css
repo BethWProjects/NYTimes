@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
 .details-component {
     margin-top: 25px;
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+    font-family: 'Goudy Bookletter 1911', serif;
+
+}
+
+.details-abstract {
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .button-35 {
@@ -41,5 +50,10 @@
 
 .details-image {
     width: 80%;
+}
+
+.details-abstract {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 }

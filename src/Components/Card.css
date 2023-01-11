@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+
 .cards {
   margin-top: 10px;
+  font-family: 'Goudy Bookletter 1911', serif;
+
 }
 
 .card {
@@ -39,7 +43,15 @@
 
   .article-title {
     margin-top: 15px;
-    margin-left: 3px;
-    margin-right: 3px;
-    font-size: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 1.2rem;
   }
+
+  @media only screen and (min-width:300px) and (max-width:675px) {
+
+    .card {
+      width: 80vw;
+      height: 400px;
+    }
+    }

@@ -17,7 +17,7 @@ const Filter = ({ filterAllArticles, articles, fetchArticles }) => {
            {buttons}
               
            <a href='/'>
-                <button className="button-36" id="filter-button" onClick={() => fetchArticles()}>ALL STORIES</button>
+                <button className="button-36" id="filter-button" onClick={() => {fetchArticles()}}>ALL STORIES</button>
            </a>
         </div>
     )
