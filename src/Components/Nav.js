@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { fetchArticles } from '../apiCalls';
 import './Nav.css'
+
+//imported fetchArticles to update state when returning home, in the callback function
 
 const Nav = () => {
     return (
         <nav className='nav-container'>
-           <Link to='/'>
-           <h1 className='nav-title'>NYTimes Reader</h1>
-           </Link> 
-           
+           <a href='/'>
+           <h1 className='nav-title' onClick={() => {fetchArticles()}}>NYTimes Top Stories</h1>
+           </a> 
         </nav>
     )
 }

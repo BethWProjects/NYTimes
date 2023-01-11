@@ -1,25 +1,24 @@
 import React from "react"
 import './Filter.css'
+import { fetchArticles } from "../apiCalls"
 
-const Filter = ({ filterAllArticles }) => {
+const Filter = ({ filterAllArticles, articles, fetchArticles }) => {
+    const categories = articles.map((article) => {
+        return article.section
+    })
+    const newCategories = [... new Set(categories)]
+    const buttons = newCategories.map((singleCategory) => {
+    return <button key={singleCategory} className="button-36" id="filter-button" onClick={() => {filterAllArticles(singleCategory)}}>{singleCategory.toUpperCase()}</button>
+})
+
+
     return (
         <div className="filter-container">
-            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('arts')}}>ARTS</button>
-            <button className="button-36" id="filter-button">BOOKS</button>
-            <button className="button-36" id="filter-button">BUSINESS</button>
-            <button className="button-36" id="filter-button">CLIMATE</button>
-            <button className="button-36" id="filter-button">CROSSWORDS</button>
-            <button className="button-36" id="filter-button">ESPANOL</button>
-            <button className="button-36" id="filter-button">MAGAZINE</button>
-            <button className="button-36" id="filter-button">MOVIES</button>
-            <button className="button-36" id="filter-button">NYREGION</button>
-            <button className="button-36" id="filter-button">OPINION</button>
-            <button className="button-36" id="filter-button">SPORTS</button>
-            <button className="button-36" id="filter-button">TECHNOLOGY</button>
-            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('us')}}>US</button>
-            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('well')}}>WELL</button>
-            <button className="button-36" id="filter-button" onClick={() => {filterAllArticles('world')}}>WORLD</button>
-            <button className="button-36" id="filter-button">CLEAR</button>
+           {buttons}
+              
+           <a href='/'>
+                <button className="button-36" id="filter-button" onClick={() => fetchArticles()}>ALL STORIES</button>
+           </a>
         </div>
     )
 }
