@@ -1,7 +1,7 @@
 const apiKey = process.env.REACT_APP_API_KEY
 
-const fetchArticles = (data) => {
-    return fetch(`https://api.nytimes.com/svc/topstories/v2/${data}.json?api-key=${apiKey}`)
+const fetchArticles = () => {
+    return fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`)
         .then(response => {
             if(!response.ok){
                 throw new Error ('Oops, looks like ther was an error!')

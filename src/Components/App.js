@@ -13,12 +13,12 @@ function App() {
 
   const [articles, setArticles] = useState([])
   const [filtered, setFiltered] = useState([])
-  const [section, setSection] = useState('')
+  // const [section, setSection] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    fetchArticles('home')
+    fetchArticles()
     .then((response) => setArticles(response.results))
     .catch((error) => {
       setError(error)
@@ -31,18 +31,15 @@ function App() {
   const filterAllArticles = (data) => {
     // console.log('this is data', data)
     let filteredArticles = articles.filter(article => article.section === data)
-    // console.log('test', filteredArticles)
     setArticles(filteredArticles)
   }
 
-  console.log('filter', filtered)
+  // console.log('filter', filtered)
   
-  // useEffect(() => {
-  //   setFilteredArticles(filterAllArticles(section))
-  // }, [])
-
+  
 const singleArticle = (date) => {
-  console.log('publised date', date)
+  console.log('date', date)
+  console.log('articles', articles)
   return articles.filter((article) => {
     return article.published_date === date
   })
@@ -53,22 +50,22 @@ const singleArticle = (date) => {
       <Nav />
       <Switch>
       <Route
+        exact path='/'
+        render={() => (
+          <div className='article-filter-section'>
+            <Filter fetchArticles={fetchArticles} articles={articles} filterAllArticles={filterAllArticles}/>
+            <Articles articles={articles} />
+          </div>
+        )}
+      
+      /> 
+      <Route
             exact path="/:id"
             render={({ match }) => {
              const clickedArticle = singleArticle(match.params.id)
              return <Details article={clickedArticle} />
             }}  
           />
-      <Route
-        path='/'
-        render={() => (
-          <div className='article-filter-section'>
-            <Filter filterAllArticles={filterAllArticles}/>
-            <Articles articles={articles} />
-          </div>
-        )}
-      
-      /> 
 
       </Switch>
     </div>
