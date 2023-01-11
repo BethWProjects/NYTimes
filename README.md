@@ -13,7 +13,7 @@ Welcome to NYTimes Top Stories! Here, I have provided an app that allows you to 
 
 ## Deployed Link
 Check out our project here!
-[NYTimes Top Stories]()
+[NYTimes Top Stories](https://ny-times-tau.vercel.app/)
 
 Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
