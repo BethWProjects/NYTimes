@@ -1,3 +1,7 @@
+.filter-container {
+  margin-top: 10px;
+}
+
 .button-36 {
     align-items: center;
     background-color: #fff;
@@ -36,3 +40,11 @@
     margin-top: 10px;
     margin-bottom: 5px;
   }
+
+  @media only screen and (min-width:300px) and (max-width:675px) {
+
+    .button-36 {
+        font-size: .7rem;
+        padding: .8rem .8rem;
+    }
+    }
