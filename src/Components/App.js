@@ -1,6 +1,5 @@
-// import logo from './logo.svg';
 import React, {useState, useEffect} from 'react';
-import { Switch, Route, Link} from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import { fetchArticles } from '../apiCalls';
 import './App.css';
 import Nav from './Nav'
@@ -13,7 +12,6 @@ function App() {
 
   const [articles, setArticles] = useState([])
   const [filtered, setFiltered] = useState([])
-  // const [section, setSection] = useState('')
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -34,9 +32,6 @@ function App() {
     setArticles(filteredArticles)
   }
 
-  // console.log('filter', filtered)
-  
-  
 const singleArticle = (date) => {
   console.log('date', date)
   console.log('articles', articles)
@@ -57,7 +52,6 @@ const singleArticle = (date) => {
             <Articles articles={articles} />
           </div>
         )}
-      
       /> 
       <Route
             exact path="/:id"
