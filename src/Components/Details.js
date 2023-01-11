@@ -1,6 +1,8 @@
 import React from 'react'
 import './Details.css'
 
+//show details or error message if no details are available. 
+
 const Details = ({article}) => {
    let display;
    if(article) {
@@ -12,7 +14,7 @@ const Details = ({article}) => {
     <a href={article[0].url} target="_blank" className='button-35'>Full Article</a>
 </div>
    } else {
-    display = <h1>Oops!!!</h1>
+    display = <h1>Sorry!  Something went wrong, please try again later.</h1>
    
    }
 
