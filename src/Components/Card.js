@@ -10,7 +10,7 @@ const Card = ({image, title, id}) => {
         <Link to={`/${id}`} className='card-id' aria-label={title}>
         <div className="card-container">
             <div className="card">
-                <img className="article-image" src={image} alt='image of article' />
+                <img className="article-image" src={image} alt={`This image is ${title}`} />
                 <h2 className="article-title">{title}</h2>
             </div>
         </div>
