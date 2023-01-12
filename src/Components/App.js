@@ -12,25 +12,35 @@ function App() {
 
   const [articles, setArticles] = useState([])
   const [filtered, setFiltered] = useState([])
+  const [filteredCategory, setFilteredCategory] = useState([])
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
+  // console.log('testing', filtered)
 
   useEffect(() => {
     fetchArticles()
-    .then((response) => setArticles(response.results))
+    .then((response) => {
+      findSections(response.results)
+      setArticles(response.results)})
     .catch((error) => {
       setError(error)
     })
     setLoading(false)
   }, [])
 
+  const findSections = (data) => {
+    const sections = data.map((news) => news.section)
+    setFiltered(sections)
+  }
+
   console.log('articles', articles)
 
   const filterAllArticles = (data) => {
-    // console.log('this is data', data)
+    //console.log('this is data', data)
     let filteredArticles = articles.filter(article => article.section === data)
-    setArticles(filteredArticles)
+    setFilteredCategory(filteredArticles)
   }
+console.log('filteredCategory', filteredCategory)
 
 const singleArticle = (date) => {
   console.log('date', date)
@@ -48,8 +58,8 @@ const singleArticle = (date) => {
         exact path='/'
         render={() => (
           <div className='article-filter-section'>
-            <Filter fetchArticles={fetchArticles} articles={articles} filterAllArticles={filterAllArticles}/>
-            <Articles articles={articles} />
+            <Filter  articles={filtered} filterAllArticles={filterAllArticles} />
+            <Articles articles={articles} filteredCategory={filteredCategory}/>
           </div>
         )}
       /> 
