@@ -3,13 +3,14 @@
 ## Overview
 Welcome to NYTimes Top Stories! Here, I have provided an app that allows you to browse a collection of NYTimes Top Stories. The articles are continuouly updated throughout the day via the api.  A user, can filter by a specific type of article and view individual details of the article, with a link to the full NYTimes article for those with a subscription. This is a solo take home challenge project assigned by [Turing School of Software and Design](https://frontend.turing.edu/). This project focused on skills I can implement quickly, using a public API, to simulate a take home challenge. This assignment took 10 hours to complete.  View the project specs here: [project description](https://mod4.turing.edu/projects/take_home/take_home_fe).
 
-![NYTimes GIF First View]()
+![NYTimes home](https://user-images.githubusercontent.com/38263992/212149811-2ac43f28-a1cc-4700-a6f2-0ac7bd27fd21.gif)
 
 
-![NYTimes Filter]()
+![NYTImes details](https://user-images.githubusercontent.com/38263992/212150030-47b3ac29-84e7-45d2-96c8-f5da977ef29a.gif)
 
 
-![NYTimes Details Page]()
+![NYTimes Mobile](https://user-images.githubusercontent.com/38263992/212150800-a54ffe6e-fc71-470a-a368-450738c6d8b2.gif)
+
 
 ## Deployed Link
 Check out our project here!
