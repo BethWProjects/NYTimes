@@ -8,7 +8,7 @@ const Filter = ({ filterAllArticles, articles }) => {
     // })
     const newCategories = [... new Set(articles)]
     const buttons = newCategories.map((singleCategory) => {
-    return <button key={singleCategory} className="button-36" id="filter-button" onClick={() => {filterAllArticles(singleCategory)}}>{singleCategory.toUpperCase()}</button>
+    return <button key={singleCategory} className="button-36" onClick={() => {filterAllArticles(singleCategory)}}>{singleCategory.toUpperCase()}</button>
 })
 
 
@@ -17,7 +17,7 @@ const Filter = ({ filterAllArticles, articles }) => {
            {buttons}
               
            <a href='/'>
-                <button className="button-36" id="filter-button" onClick={() => {fetchArticles()}}>ALL STORIES</button>
+                <button className="button-36" onClick={() => {fetchArticles()}}>ALL STORIES</button>
            </a>
         </div>
     )

@@ -19,7 +19,6 @@
     font-weight: 700;
     justify-content: center;
     line-height: 1;
-    margin: 0;
     outline: none;
     padding: .7rem 1rem;
     text-align: center;
@@ -30,17 +29,14 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  }
-  
-  .button-36:hover {
-    box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
-  }
-
-  #filter-button {
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 10px;
     margin-bottom: 5px;
+  }
+  
+  .button-36:hover {
+    box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
   }
 
   @media only screen and (min-width:300px) and (max-width:675px) {

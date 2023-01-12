@@ -9,7 +9,7 @@ const Details = ({article}) => {
    let display;
    if(article[0]) {
     display =  <div className='details-component'>
-    <img src={!article[0].multimedia ? defaultImage : article[0].multimedia[1].url} className='details-image'></img>
+    <img src={!article[0].multimedia ? defaultImage : article[0].multimedia[1].url} className='details-image' alt={`This image is ${article[0].title}`}></img>
     <h1 className='details-title'>{article[0].title}</h1>
     <p className='details-byline'>{article[0].byline}</p>
     <p className='details-abstract'>{article[0].abstract}</p>
