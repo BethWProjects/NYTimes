@@ -5,8 +5,9 @@ import defaultImage from '../Images/NYTimes.png'
 //show details or error message if no details are available. 
 
 const Details = ({article}) => {
+    console.log('article', article)
    let display;
-   if(article) {
+   if(article[0]) {
     display =  <div className='details-component'>
     <img src={!article[0].multimedia ? defaultImage : article[0].multimedia[1].url} className='details-image'></img>
     <h1 className='details-title'>{article[0].title}</h1>
