@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { fetchArticles } from '../apiCalls';
 import './App.css';
 import Nav from './Nav'
 import Articles from './Articles';
 import Details from './Details';
 import Filter from './Filter';
-
 
 function App() {
 
@@ -15,7 +14,6 @@ function App() {
   const [filteredCategory, setFilteredCategory] = useState([])
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
-  // console.log('testing', filtered)
 
   useEffect(() => {
     fetchArticles()
@@ -33,18 +31,12 @@ function App() {
     setFiltered(sections)
   }
 
-  console.log('articles', articles)
-
   const filterAllArticles = (data) => {
-    //console.log('this is data', data)
     let filteredArticles = articles.filter(article => article.section === data)
     setFilteredCategory(filteredArticles)
   }
-console.log('filteredCategory', filteredCategory)
 
 const singleArticle = (date) => {
-  console.log('date', date)
-  console.log('articles', articles)
   return articles.filter((article) => {
     return article.published_date === date
   })

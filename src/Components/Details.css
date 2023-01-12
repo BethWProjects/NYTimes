@@ -14,6 +14,13 @@
   margin-right: 25px;
 }
 
+.details-image {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+ 
+}
+
 .button-35 {
   align-items: center;
   background-color: #fff;
