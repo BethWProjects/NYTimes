@@ -16,7 +16,7 @@ const Articles = ({articles, filteredCategory}) => {
     const articleData = data.map((article) => {
         return(
             <Card 
-                id={article.published_date}
+                id={article.id}
                 key={article.uri}
                 image={!article.multimedia ? defaultImage : article.multimedia[2].url}
                 title={article.title}

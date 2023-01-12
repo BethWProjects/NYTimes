@@ -18,8 +18,12 @@ function App() {
   useEffect(() => {
     fetchArticles()
     .then((response) => {
+      const newId = response.results.map((result, index) => ({
+        ...result,
+        id: index++,
+      }))
       findSections(response.results)
-      setArticles(response.results)})
+      setArticles(newId)})
     .catch((error) => {
       setError(error)
     })
@@ -36,9 +40,10 @@ function App() {
     setFilteredCategory(filteredArticles)
   }
 
-const singleArticle = (date) => {
+const singleArticle = (id) => {
+  let newId = parseInt(id)
   return articles.filter((article) => {
-    return article.published_date === date
+    return article.id === newId
   })
 }
 
@@ -58,8 +63,8 @@ const singleArticle = (date) => {
       <Route
             exact path="/:id"
             render={({ match }) => {
-             const clickedArticle = singleArticle(match.params.id)
-             return <Details article={clickedArticle} />
+             singleArticle(match.params.id)
+             return <Details article={singleArticle(match.params.id)} />
             }}  
           />
 
