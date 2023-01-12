@@ -11,6 +11,7 @@ Welcome to NYTimes Top Stories! Here, I have provided an app that allows you to 
 
 ![NYTimes Mobile](https://user-images.githubusercontent.com/38263992/212150800-a54ffe6e-fc71-470a-a368-450738c6d8b2.gif)
 
+<img width="1028" alt="Screen Shot 2023-01-12 at 11 39 10 AM" src="https://user-images.githubusercontent.com/38263992/212152476-e7d87d1f-4a38-4f45-8c43-576d22a437ff.png">
 
 ## Deployed Link
 Check out our project here!
