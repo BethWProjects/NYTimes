@@ -47,7 +47,7 @@ Deployed using ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style
 - 100% Accessibility rating keeping quality testing through the development cycle
 
 ### Challenges
-- Updating state with hooks with the same endpoint. 
+- Creating a unique ID for the api data.   
 
 ## Contributors
 Beth Wilson [github](https://github.com/BethWProjects) | [LinkedIn](https://www.linkedin.com/in/beth-wilson-92594284/)
